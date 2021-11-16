@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">огород</string>
+    <string name="result">Молодец!!!</string>
+    <string name="error">Добавь еще!</string>
+    <string name="start">Старт</string>
+    <string name="next">Дальше</string>
+</resources>

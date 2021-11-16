@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/cabbage_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/menuitem_background"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/eggplant_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/cabbage" />
+
+    <ImageButton
+        android:id="@+id/carrot_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/menuitem_background"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/eggplant_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/eggplant_button"
+        app:srcCompat="@drawable/carrot" />
+
+    <ImageButton
+        android:id="@+id/turnip_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/menuitem_background"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@id/cucumber_button"
+        app:layout_constraintEnd_toEndOf="@+id/tomato_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tomato_button"
+        app:srcCompat="@drawable/turnip" />
+
+    <ImageButton
+        android:id="@+id/eggplant_button"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/menuitem_background"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/carrot_button"
+        app:layout_constraintEnd_toEndOf="@+id/cabbage_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cabbage_button"
+        app:srcCompat="@drawable/eggplant" />
+
+    <ImageButton
+        android:id="@+id/cucumber_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/menuitem_background"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/turnip_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/turnip_button"
+        app:srcCompat="@drawable/cucumber" />
+
+    <ImageButton
+        android:id="@+id/tomato_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:drawable/menuitem_background"
+        android:clickable="false"
+        app:layout_constraintBottom_toTopOf="@+id/turnip_button"
+        app:layout_constraintEnd_toStartOf="@+id/cabbage_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/tomato" />
+
+    <TextView
+        android:id="@+id/task_view"
+        style="@style/Theme.TextView"
+        android:layout_width="324dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.227" />
+
+    <TextView
+        android:id="@+id/vegetable_counter"
+        android:layout_width="101dp"
+        android:layout_height="123dp"
+        android:fontFamily="sans-serif"
+        android:shadowColor="@color/black"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:textColor="@color/white"
+        android:textSize="96sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cabbage_button"
+        app:layout_constraintEnd_toEndOf="@+id/cabbage_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/cabbage_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832" />
+
+    <Button
+        android:id="@+id/button_start"
+        style="@style/Theme.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.272" />
+
+    <TextView
+        android:id="@+id/text_result"
+        style="@style/Theme.TextView"
+        android:layout_width="170dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <Button
+        android:id="@+id/button_next"
+        style="@style/Theme.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button_start"
+        app:layout_constraintEnd_toEndOf="@+id/button_start"
+        app:layout_constraintStart_toStartOf="@+id/button_start"
+        app:layout_constraintTop_toBottomOf="@+id/text_result" />
+
+    <ImageView
+        android:id="@+id/face"
+        android:layout_width="101dp"
+        android:layout_height="144dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tomato_button"
+        app:layout_constraintEnd_toStartOf="@+id/button_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/hedgehog" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
