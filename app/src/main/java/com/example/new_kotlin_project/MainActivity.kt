@@ -1,5 +1,7 @@
 package com.example.new_kotlin_project
 
+import android.content.pm.ActivityInfo
+import android.content.res.Configuration
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,9 +19,6 @@ class MainActivity : AppCompatActivity() {
 
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
-
-        val mediaPlayer = MediaPlayer.create(applicationContext, R.raw.hello)
-        mediaPlayer.start()
     }
 
     override fun onStart() {
@@ -28,6 +27,18 @@ class MainActivity : AppCompatActivity() {
         bindingClass.buttonStart.setOnClickListener {
             random()
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.run {
+            putInt("KEY", bindingClass.vegetableCounter.text.toString().toInt())
+        }
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        bindingClass.vegetableCounter.text = savedInstanceState.getInt("KEY").toString()
     }
 
     private fun random() {
